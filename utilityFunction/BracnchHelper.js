@@ -5,12 +5,19 @@ const branchHelper = (dirPath,indent) => {
     const isFile = fs.lstatSync(dirPath).isFile();
     if (isFile) {
         const fileName = path.basename(dirPath);
-        console.log(indent+"-------"+fileName);
+        console.log(`${indent}  ------->  ${fileName}`.green);
         
     } else {
         const folderName = path.basename(dirPath);
-        console.log(indent + "------->" + folderName);
-        fs.readdirSync(dirPath).forEach(child => { branchHelper(path.join(dirPath, child), indent + "\t") });
+        console.log(`${indent}  ------->  ${folderName}`.green);
+        try {
+            fs.readdirSync(dirPath).forEach(child => { branchHelper(path.join(dirPath, child), indent + "\t") });
+        } catch (error) {
+            
+            console.log("Done Branching".red);
+            
+        }
+      
         
     }
     

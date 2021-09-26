@@ -11,5 +11,8 @@
   "license": "ISC",
   "bin": {
     "sam": "cli.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
   }
 }

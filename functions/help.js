@@ -4,7 +4,7 @@ const helpFn = () => {
     node cli.js organize "directory path" 
     node cli.js help->to get help
     `
-    console.log(helpString);
+    console.log(helpString.green);
     
 }
 

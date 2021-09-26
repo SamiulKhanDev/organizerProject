@@ -17,7 +17,7 @@ const moveFile = (src,dest,type) => {
         
     })
 
-    console.log(`${fileName} copied to ${destFilePath}`);
+    console.log(`${fileName} copied to ${destFilePath}`.green);
     
     
     

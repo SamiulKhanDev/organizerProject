@@ -10,7 +10,7 @@ const readFileName = (folderPath) => {
      try {
         fs.mkdirSync(destination);
      } catch (error) {
-        console.log("this folder already has an organizer folder,please delete that to run this command");
+        console.log("this folder already has an organizer folder,please delete that to run this command".red);
         return;
      }
     //----------------------------------------

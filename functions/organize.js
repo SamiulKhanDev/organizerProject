@@ -7,8 +7,7 @@ const organizeFn = (dirPath) => {
         dirPath = process.cwd();
         
     }
-    const folderPath = path.join(__dirname, dirPath);
-    readFileName(folderPath);
+    readFileName(dirPath);
 
 }
 
