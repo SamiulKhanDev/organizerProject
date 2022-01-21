@@ -1,15 +1,11 @@
-const utility = require("../typeSpecifierUtility");
-const types = utility.types;
+const types = require("../typeSpecifierUtility");
+
 const getType = (ext) => {
-    for (let type in types) {
-        const spType = types[type];
-        for (let extType in spType) {       
-            if (spType[extType] === ext) {           
-                return type;
-            };
-        }
+    if (types.hasOwnProperty(ext))
+    {
+        return types[ext];
     }
-return "unknown"
+     return "Unknown"
 }
 
 module.exports = getType;
