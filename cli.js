@@ -11,7 +11,7 @@ switch (command) {
     branchFn(val);
     break;
   case "organize":
-    organizeFn(val);
+    // organizeFn(val);
     break;
   case "help":
     helpFn();
